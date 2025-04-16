@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doorzichtig of Ondoorzichtig Bouwplastic? Wat Kies Je?</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --text: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .intro {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .article-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .article-section:hover {
+            transform: translateY(-5px);
+        }
+        
+        h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--secondary);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .pros-cons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .pros, .cons {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .pros {
+            background-color: rgba(46, 204, 113, 0.1);
+            border-left: 4px solid #2ecc71;
+        }
+        
+        .cons {
+            background-color: rgba(231, 76, 60, 0.1);
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .pros li::before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .cons li::before {
+            content: "✖";
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e6f7ff;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #f5f7fa, #e4e8eb);
+            border-left: 5px solid var(--secondary);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .highlight {
+            background-color: rgba(52, 152, 219, 0.2);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.6);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .pros-cons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Doorzichtig of Ondoorzichtig Bouwplastic? Wat Kies Je?</h1>
+            <p class="intro">Bouwplastic is een veelzijdig materiaal dat wordt gebruikt voor bescherming, isolatie en afdekking bij constructie- en renovatiewerkzaamheden. Net zoals bij het kiezen van het juiste <a href="https://www.afdekzeilwinkel.nl/schaduwdoek/screendoek/" style="color: white; text-decoration: underline;">screens zonwering</a>, is een van de belangrijkste keuzes bij bouwplastic of je gaat voor <strong>doorzichtig</strong> of <strong>ondoorschijnend</strong>.</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="article-section">
+            <h2>1. Wat is Bouwplastic en Waar Wordt Het Voor Gebruikt?</h2>
+            <p>Bouwplastic, ook wel bekend als bouwfolie of beschermfolie, is een duurzaam kunststof materiaal dat wordt ingezet bij:</p>
+            <ul>
+                <li><strong>Tijdelijke afdekking</strong> van vloeren, meubels en ramen tijdens verbouwingen.</li>
+                <li><strong>Bescherming tegen stof, vocht en vuil</strong>.</li>
+                <li><strong>Kasconstructies</strong> (voor doorzichtig plastic).</li>
+                <li><strong>Thermische isolatie</strong> en winddichting.</li>
+            </ul>
+            <p>De keuze tussen doorzichtig en ondoorzichtig plastic hangt af van de specifieke behoeften van je project.</p>
+        </section>
+        
+        <section class="article-section">
+            <h2>2. Doorzichtig Bouwplastic: Lichtdoorlatend en Multifunctioneel</h2>
+            
+            <h3>Voordelen van Doorzichtig Bouwplastic</h3>
+            <div class="pros-cons">
+                <ul class="pros">
+                    <li><strong>Natuurlijk licht behoud</strong> – Ideaal voor ruimtes waar daglicht nodig is, zoals bij kasfolie of tijdelijke afdekking van ramen.</li>
+                    <li><strong>Controle mogelijkheid</strong> – Je kunt zien wat er achter het plastic gebeurt, handig voor inspecties.</li>
+                    <li><strong>Plantengroei bevordering</strong> – Wordt vaak gebruikt in de tuinbouw omdat het zonlicht doorlaat.</li>
+                    <li><strong>Esthetisch neutraal</strong> – Minder opvallend dan donkere folie, waardoor het geschikt is voor tijdelijke gevelbescherming.</li>
+                </ul>
+            </div>
+            
+            <h3>Nadelen van Doorzichtig Bouwplastic</h3>
+            <div class="pros-cons">
+                <ul class="cons">
+                    <li><strong>Minder UV-bescherming</strong> – Sommige doorzichtige folies bieden minder bescherming tegen schadelijke straling.</li>
+                    <li><strong>Zichtbaar vuil</strong> – Stof en vlekken zijn duidelijker zichtbaar.</li>
+                    <li><strong>Minder privacy</strong> – Niet geschikt als je afscherming nodig hebt.</li>
+                </ul>
+            </div>
+            
+            <h3>Best Toepasbaar Voor:</h3>
+            <ul>
+                <li><strong>Kasfolie</strong> voor tuinieren.</li>
+                <li><strong>Tijdelijke raamafdekking</strong> tijdens renovaties.</li>
+                <li><strong>Bouwplaatsen waar zichtbaarheid nodig is</strong>.</li>
+            </ul>
+        </section>
+        
+        <section class="article-section">
+            <h2>3. Ondoorzichtig Bouwplastic: Maximale Bescherming en Privacy</h2>
+            
+            <h3>Voordelen van Ondoorzichtig Bouwplastic</h3>
+            <div class="pros-cons">
+                <ul class="pros">
+                    <li><strong>Betere UV- en warmteweerkaatsing</strong> – Ideaal voor het afdekken van materialen die niet aan zonlicht blootgesteld mogen worden.</li>
+                    <li><strong>Hogere privacy</strong> – Geschikt voor afscherming van bouwplaatsen.</li>
+                    <li><strong>Sterkere bescherming tegen weersinvloeden</strong> – Vaak dikker en duurzamer dan doorzichtige varianten.</li>
+                    <li><strong>Minder zichtbaar vuil</strong> – Stof en vlekken vallen minder op.</li>
+                </ul>
+            </div>
+            
+            <h3>Nadelen van Ondoorzichtig Bouwplastic</h3>
+            <div class="pros-cons">
+                <ul class="cons">
+                    <li><strong>Geen lichtdoorlatendheid</strong> – Niet geschikt voor plantengroei of ruimtes waar natuurlijk licht nodig is.</li>
+                    <li><strong>Minder controle</strong> – Je kunt niet zien wat er achter het plastic gebeurt zonder het te verwijderen.</li>
+                </ul>
+            </div>
+            
+            <h3>Best Toepasbaar Voor:</h3>
+            <ul>
+                <li><strong>Afdekken van vloeren en meubels</strong> tegen verf en stof.</li>
+                <li><strong>Tijdelijke gevelbescherming</strong> bij schilderwerk.</li>
+                <li><strong>Bouwplaatsafrastering</strong> voor privacy en veiligheid.</li>
+            </ul>
+        </section>
+        
+        <section class="article-section">
+            <h2>4. Welke Dikte en Materiaal Moet Je Kiezen?</h2>
+            <p>Naast de keuze tussen doorzichtig en ondoorzichtig, moet je ook letten op:</p>
+            
+            <h3>Dikte van Bouwplastic</h3>
+            <ul>
+                <li><strong>40 – 80 micron</strong>: Lichtgewicht, geschikt voor korte projecten.</li>
+                <li><strong>100 – 200 micron</strong>: Sterker, ideaal voor langdurig gebruik en zwaardere bescherming.</li>
+            </ul>
+            
+            <h3>Materiaalsoorten</h3>
+            <ul>
+                <li><strong>Polyethyleen (PE)</strong>: Goedkoop en veelzijdig.</li>
+                <li><strong>Gerecycled plastic</strong>: Milieuvriendelijker.</li>
+                <li><strong>Gewapend bouwplastic</strong>: Extra sterk, met vezelversterking.</li>
+            </ul>
+        </section>
+        
+        <section class="article-section">
+            <h2>5. Conclusie: Wat is de Beste Keuze voor Jou?</h2>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Situatie</th>
+                        <th>Aanbevolen Type Bouwplastic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kasfolie of licht nodig?</td>
+                        <td><strong>Doorzichtig</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Maximale bescherming nodig?</td>
+                        <td><strong>Ondoorzichtig</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Tijdelijke raamafdekking?</td>
+                        <td><strong>Doorzichtig</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Vloerbescherming bij schilderen?</td>
+                        <td><strong>Ondoorzichtig</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="conclusion">
+                <p>Kies <span class="highlight">doorzichtig</span> als je lichtdoorlatendheid nodig hebt en <span class="highlight">ondoorschijnend</span> voor maximale bescherming en privacy. Let ook op de dikte en het materiaal voor de beste prestatie.</p>
+            </div>
+            
+            <div class="cta">
+                <p>Heb jij al een voorkeur? Deel je ervaringen met bouwplastic in de comments!</p>
+                <a href="#" class="cta-button">Laat een reactie achter</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

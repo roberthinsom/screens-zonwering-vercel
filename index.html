@@ -355,5 +355,97 @@
             </div>
         </section>
     </div>
+    <div style="text-align: center; margin: 50px auto; max-width: 1000px; font-family: 'Arial', sans-serif;">
+    <!-- Animated Social Links Section -->
+    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 50px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #3b5998, #ff0000, #34a853); animation: rainbow 8s linear infinite;"></div>
+        
+        <h3 style="margin-bottom: 30px; font-size: 28px; color: #2d3748; font-weight: 700; position: relative; display: inline-block;">
+            Connect With Us
+            <span style="position: absolute; bottom: -10px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, #3b5998, #ff0000, #34a853); animation: rainbow 8s linear infinite;"></span>
+        </h3>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 40px;">
+            <!-- Facebook Card -->
+            <a href="https://web.facebook.com/people/Riool-herstel-Leidingrenovatie-met-relinen/100091541303405/" 
+               target="_blank" 
+               style="text-decoration: none;"
+               class="social-card">
+                <div style="background: #3b5998; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 5px 15px rgba(59, 89, 152, 0.3); transition: all 0.3s ease;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                </div>
+                <p style="margin: 0; color: #2d3748; font-weight: 600; font-size: 16px;">Facebook</p>
+                <div style="width: 0; height: 2px; background: #3b5998; margin: 8px auto 0; transition: width 0.3s ease;"></div>
+            </a>
+            
+            <!-- YouTube Card -->
+            <a href="https://www.youtube.com/@riool-herstel" 
+               target="_blank" 
+               style="text-decoration: none;"
+               class="social-card">
+                <div style="background: #ff0000; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3); transition: all 0.3s ease;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                </div>
+                <p style="margin: 0; color: #2d3748; font-weight: 600; font-size: 16px;">YouTube</p>
+                <div style="width: 0; height: 2px; background: #ff0000; margin: 8px auto 0; transition: width 0.3s ease;"></div>
+            </a>
+            
+            <!-- Google Maps Card -->
+            <a href="https://www.google.com/maps/dir/51.6412942,5.6360178/Vluchtoord+2C,+5406+XP+Uden/@51.6761044,5.6458745,19z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47c71cf85a3fdfb3:0xe7f2c25700f6b61d!2m2!1d5.6467016!2d51.676632?entry=ttu&g_ep=EgoyMDI1MDQxMy4wIKXMDSoASAFQAw%3D%3D" 
+               target="_blank" 
+               style="text-decoration: none;"
+               class="social-card">
+                <div style="background: #34a853; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; box-shadow: 0 5px 15px rgba(52, 168, 83, 0.3); transition: all 0.3s ease;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3698/3698156.png" alt="Google Maps" style="width: 40px; height: 40px; filter: brightness(0) invert(1);">
+                </div>
+                <p style="margin: 0; color: #2d3748; font-weight: 600; font-size: 16px;">Directions</p>
+                <div style="width: 0; height: 2px; background: #34a853; margin: 8px auto 0; transition: width 0.3s ease;"></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Animated YouTube Embed -->
+    <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); overflow: hidden; transform: translateY(0); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.12)'" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.08)'">
+        <div style="background: linear-gradient(90deg, #ff0000, #ff5e5e); padding: 20px; text-align: center;">
+            <h3 style="margin: 0; font-size: 24px; color: white; font-weight: 700;">Our YouTube Channel</h3>
+        </div>
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed?listType=user_uploads&list=riool-herstel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block;"></iframe>
+    </div>
+</div>
+
+<style>
+    @keyframes rainbow {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+    
+    .social-card:hover .social-icon {
+        transform: scale(1.1) rotate(5deg);
+    }
+    
+    .social-card:hover div:last-child {
+        width: 50px;
+    }
+</style>
+
+<script>
+    // Add animation to social cards on hover
+    document.querySelectorAll('.social-card').forEach(card => {
+        const icon = card.querySelector('div:first-child');
+        
+        card.addEventListener('mouseenter', () => {
+            icon.style.transform = 'scale(1.1) rotate(5deg)';
+            card.querySelector('div:last-child').style.width = '50px';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            icon.style.transform = 'scale(1) rotate(0)';
+            card.querySelector('div:last-child').style.width = '0';
+        });
+    });
+</script>
 </body>
 </html>
